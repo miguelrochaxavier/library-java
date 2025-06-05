@@ -2,6 +2,7 @@ package application;
 
 import entities.AddClerk;
 import entities.AddLibrarian;
+import entities.HistoryIssuedBooks;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class Main {
 
         AddLibrarian addLibrarian = new AddLibrarian();
         AddClerk addClerk = new AddClerk();
+        HistoryIssuedBooks historyIssuedBooks = new HistoryIssuedBooks();
 
 
         while (escSystemContinue) {
@@ -46,6 +48,7 @@ public class Main {
                     addLibrarian.viewAllClerks();
                     break;
                 case 5:
+                    historyIssuedBooks.start();
                     break;
                 case 6:
                     break;
@@ -53,8 +56,11 @@ public class Main {
                     System.out.println("Log out...");
                     System.out.println("Press any key to continue...");
                     escSystemContinue = false;
-                default:
                     break;
+
+                    default:
+                        System.out.println("Invalid choice. Try again.");
+                        break;
             }
         }
 
