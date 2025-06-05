@@ -42,8 +42,8 @@ public class Main {
                 case 3:
                     addClerk.viewAllClerks();
                     break;
-
                 case 4:
+                    addLibrarian.viewAllClerks();
                     break;
                 case 5:
                     break;

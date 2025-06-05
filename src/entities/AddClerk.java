@@ -48,7 +48,7 @@ public class AddClerk {
                 Clerk clerk = new Clerk(name, tel, salary);
                 clerks.add(clerk);
 
-                System.out.println("\nClerk with name " + name + " has created successfully");
+                System.out.println("\nLibrarian with name " + name + " has created successfully");
 
                 System.out.println("\nYour ID is: " + i);
                 System.out.println("\nYour Password is: " + i);
@@ -63,9 +63,9 @@ public class AddClerk {
 
     public void viewAllClerks() {
         if (clerks.isEmpty()) {
-            System.out.println("\nNo clerks found.");
+            System.out.println("\nNo librarian found.");
         } else {
-            System.out.println("\nList All Clerks:");
+            System.out.println("\nList All Librarians:");
             int index = 1;
             for (Clerk c : clerks) {
                 System.out.println("\nID: " + index++);
