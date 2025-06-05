@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AddClerk {
 
-    public static void main(String[] args) {
+    public void start() {
 
         Scanner sc = new Scanner(System.in);
         boolean escSystemContinue = true;

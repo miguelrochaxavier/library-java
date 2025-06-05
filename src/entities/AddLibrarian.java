@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AddLibrarian {
 
-    public static void main(String[] args) {
+    public void start() {
 
         Scanner sc = new Scanner(System.in);
         boolean escSystemContinue = true;
@@ -36,4 +36,16 @@ public class AddLibrarian {
             return;
         }
     }
+
+    /*    @Override
+    public String toString() {
+        String s = "ContaBancaria";
+        s += " \nnomeCliente: " + contaCliente.nameAccountClient;
+        s += "; \nnumConta: [ID] " + contaCliente.numAccountClient;
+        s += "; \nsaldo: R$" + contaCliente.balanceAccountClient;
+        s += "\n";
+        return s;
+    }
+*/
+
 }

@@ -29,9 +29,11 @@ public class Main {
             switch (escSystemChoice) {
                 case 1:
                     AddClerk addClerk = new AddClerk();
+                    addClerk.start();
                     break;
                 case 2:
                     AddLibrarian addLibrarian = new AddLibrarian();
+                    addLibrarian.start();
                     break;
                 case 3:
                     break;
