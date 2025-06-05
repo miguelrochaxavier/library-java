@@ -1,8 +1,29 @@
 package entities;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+class Clerk {
+    public String name;
+    public int tel;
+    public int salary;
+
+    public Clerk(String name, int tel, int salary) {
+        this.name = name;
+        this.tel = tel;
+        this.salary = salary;
+    }
+}
 
 public class AddClerk {
+
+    public String name;
+    public int tel;
+    public int salary;
+    public int AddNumberOfClerks;
+
+    public List<Clerk> clerks = new ArrayList<>();
 
     public void start() {
 
@@ -10,19 +31,22 @@ public class AddClerk {
         boolean escSystemContinue = true;
 
         System.out.printf("\nEnter number of clerks: ");
-        int AddNumberOfClerks = sc.nextInt();
+        AddNumberOfClerks = sc.nextInt();
 
         while (escSystemContinue) {
             for (int i = 1; i <= AddNumberOfClerks; i++) {
 
                 System.out.println("\nEnter your name:");
-                String name = sc.next();
+                name = sc.next();
 
                 System.out.println("\nEnter your Phone number:");
-                int tel = sc.nextInt();
+                tel = sc.nextInt();
 
                 System.out.println("\nEnter your salary:");
-                int salary = sc.nextInt();
+                salary = sc.nextInt();
+
+                Clerk clerk = new Clerk(name, tel, salary);
+                clerks.add(clerk);
 
                 System.out.println("\nClerk with name " + name + " has created successfully");
 
@@ -32,8 +56,24 @@ public class AddClerk {
 
             System.out.println("\nPress any key to continue...");
             sc.nextLine();
-
+            sc.nextLine();
             return;
         }
     }
+
+    public void viewAllClerks() {
+        if (clerks.isEmpty()) {
+            System.out.println("\nNo clerks found.");
+        } else {
+            System.out.println("\nList All Clerks:");
+            int index = 1;
+            for (Clerk c : clerks) {
+                System.out.println("\nID: " + index++);
+                System.out.println("Name: " + c.name);
+                System.out.println("Phone: " + c.tel);
+                System.out.println("Salary: " + c.salary);
+            }
+        }
+    }
 }
+
