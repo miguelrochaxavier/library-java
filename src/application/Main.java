@@ -28,8 +28,7 @@ public class Main {
             System.out.printf("\n3- View all clerks");
             System.out.printf("\n4- View all librarians");
             System.out.printf("\n5- View history of issued books");
-            System.out.printf("\n6- View all books in the library");
-            System.out.printf("\n7- Log out\n");
+            System.out.printf("\n6- Log out\n");
 
             System.out.printf("\nEnter your choice: ");
             int escSystemChoice = sc.nextInt();
@@ -51,8 +50,6 @@ public class Main {
                     historyIssuedBooks.start();
                     break;
                 case 6:
-                    break;
-                case 7:
                     System.out.println("Log out...");
                     System.out.println("Press any key to continue...");
                     escSystemContinue = false;
